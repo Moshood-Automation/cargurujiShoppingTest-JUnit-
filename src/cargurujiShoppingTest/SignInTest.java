@@ -15,7 +15,17 @@ public class SignInTest {
 	
 	@Before 
 	public void setUp(){
+		System.setProperty("webdriver.chrome.driver", "\\chromedriver.exe");
 		driver = new ChromeDriver();
+		
+	    //UNCOMMENT THE TWO LINES OF CODE BELOW TO RUN TEST IN FIREFOX BROWSER
+	    //System.setProperty("webdriver.gecko.driver", "\\geckodriver.exe");			
+	    //driver = new FirefoxDriver();
+	      
+	    //UNCOMMENT THE TWO LINES OF CODE BELOW TO RUN TEST IN INTERNET EXPLORER BROWSER
+	    //System.setProperty("webdriver.ie.driver", "\\IEDriverServer.exe");
+	    //driver = new InternetExplorerDriver();
+		
 		driver.manage().window().maximize();
 		driver.navigate().to("http://carguruji.com/shop/");
 		//This code is for synchronisation in WebDriver i.e: causes 2 or more events to occur at exactly the same time, rate or with coordinated timing. 
